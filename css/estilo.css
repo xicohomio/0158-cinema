@@ -1,0 +1,14 @@
+.main{
+	width: 75%;
+	margin: 0 auto;
+}
+
+.event{
+	float: left;
+	width: 50%;
+}
+
+.book{
+	float: right;
+	width: 40%;
+}
