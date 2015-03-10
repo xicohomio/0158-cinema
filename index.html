@@ -19,6 +19,11 @@
 
   </head>
   <body>
+    <button name="bbbb"  id="bbbb">clica aqui</button>
+      <div class="result">
+        
+      </div>
+
     <div class="main">
     <div class="event">
     <h1>Cinema</h1>
@@ -89,9 +94,32 @@
   $('[data-toggle="tooltip"]').tooltip({ "show": 500, "hide": 100 })
 })
 </script>
+
+
 </div>
 
 
 </div>
   </body>
+<script>
+    $( "#bbbb" ).click(function() {
+
+    orig ="http://www.omdbapi.com/?t=war&y=&plot=short&r=json";
+
+    $.get( orig, function( data ) {
+    $( ".result" ).html( data );
+
+    });
+    });
+
+    $( "#bbbb" ).click(function() {
+      $.getJSON( "http://www.omdbapi.com/?t=war&y=&plot=short&r=json", function( data ) {
+        $//( ".resultjson" ).append('<h1>' + data["Title"] + '</h1>');
+
+    });
+    });
+
+
+</script>
+
 </html>
